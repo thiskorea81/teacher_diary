@@ -10,7 +10,10 @@ export const useMainStore = defineStore('main', {
       this.user = {
         username: userData.username,
         email: userData.email,
-        role: userData.role,  // 역할 저장
+        role: userData.role,
+        grade: userData.grade,
+        classroom: userData.classroom,
+        number: userData.number,
       };
       this.isAuthenticated = true;
     },

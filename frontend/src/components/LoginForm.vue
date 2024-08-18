@@ -50,8 +50,12 @@ export default {
           // 로그인 성공 후 역할에 따라 페이지 리다이렉트
           if (data.role === 'admin') {
             router.push('/admin');  // 관리자 페이지로 리다이렉트
-          } else {
-            router.push('/home');   // 일반 사용자 페이지로 리다이렉트
+          } else if (data.role === 'teacher') {
+            router.push('/teacher');  // 교사용 페이지로 리다이렉트
+          } else if (data.role === 'student') {
+            router.push('/student');  // 학생용 페이지로 리다이렉트
+          } else if (data.role === 'parent') {
+            router.push('/parent');  // 학부모용 페이지로 리다이렉트
           }
         } else {
           console.error('Login failed:', data);

@@ -7,3 +7,6 @@ class User(SQLModel, table=True):
     email: str
     hashed_password: str
     role: str  # 사용자 역할 (student, parent, teacher, admin)
+    grade: Optional[int] = None
+    classroom: Optional[int] = None
+    number: Optional[int] = None
